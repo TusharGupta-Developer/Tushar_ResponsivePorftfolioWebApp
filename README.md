@@ -1,8 +1,5 @@
 # Responsive Portfolio WebApp
 
-
----
-
 ## Features
 
 - **Responsive Portfolio Website using HTML, CSS, and JavaScript**
