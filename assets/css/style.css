@@ -48,3 +48,76 @@
     --z-tooltip: 10;
     --z-fixed: 100;
 }
+
+
+
+/*=============== BASE ===============*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: hsl(14, 55%, 55%); */
+}
+
+body,
+input,
+textarea,
+button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*=============== HEADER & NAV ===============*/
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+
+    background-color: transparent;
+    z-index: var(--z-fixed);
+}
+
+
+nav{
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+}
+
+.nav__toggle,
+.nav__close{
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
