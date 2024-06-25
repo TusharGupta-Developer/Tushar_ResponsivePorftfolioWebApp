@@ -2,7 +2,7 @@
 
 ## Features
 
-- **Responsive Portfolio Website using HTML, CSS, and JavaScript**
+- **Responsive Portfolio Website using HTML, CSS, and JavaScript.**
 - Features engaging animations on scroll.
 - Provides smooth scrolling across sections.
 - Showcases a beautiful and customizable theme.
