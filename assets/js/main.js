@@ -44,3 +44,4 @@ const linkAction = ()=>{
 navLink.forEach(n => n.addEventListener("click", linkAction))
 // Purpose: Adds an event listener to each element in the navLink NodeList.
 
+
