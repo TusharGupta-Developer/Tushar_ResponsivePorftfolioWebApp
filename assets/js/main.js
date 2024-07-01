@@ -45,3 +45,17 @@ navLink.forEach(n => n.addEventListener("click", linkAction))
 // Purpose: Adds an event listener to each element in the navLink NodeList.
 
 
+
+/*=============== Self:ADD BLUR HEADER ===============*/
+document.addEventListener("scroll", ()=>{
+    const header = document.getElementById("header");
+
+    if(window.scrollY>50){ // Checks if the vertical scroll position (window.scrollY) is greater than 50 pixels.
+
+        header.classList.add("blur__header")
+    }
+    else{
+        header.classList.remove("blur__header")
+    }
+})
+
