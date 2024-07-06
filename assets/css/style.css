@@ -214,7 +214,7 @@ img {
 }
 
 .section {
-    padding-block: 2rem 2rem;
+    padding-block: 5rem 2rem;
 }
 
 .section__title {
@@ -499,10 +499,35 @@ opacity: 0;: Makes the element fully transparent. */
 
 .skills__box{
     display: grid;
-    align-items: center;
+    /* align-items: center; */
+    justify-items: center;
     transition: transform .4s;
 }
 
 .skills__box:hover{
     transform: translateY(-.25rem);
+}
+
+
+
+/*=============== SERVICES ===============*/
+
+.services{
+    background-color: var(--container-color);
+}
+
+.services__container{
+    row-gap: 2rem;
+}
+
+.services__icon{
+    display: block;
+    color: var(--first-color-light);
+    font-size: 2rem;
+    /* margin-bottom: 1rem; */
+}
+
+.services__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: .75rem;
 }
