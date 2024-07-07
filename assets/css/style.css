@@ -74,6 +74,14 @@ body {
 
 }
 
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+
 h1,
 h2,
 h3,
@@ -334,7 +342,7 @@ opacity: 0;: Makes the element fully transparent. */
 
 
 /*=============== BUTTON ===============*/
-.button{
+.button {
     display: inline-flex;
     justify-content: center;
     background-color: var(--first-color);
@@ -344,7 +352,8 @@ opacity: 0;: Makes the element fully transparent. */
     transition: background-color .4s;
 
 }
-.button:hover{
+
+.button:hover {
     background-color: var(--first-color-alt);
 }
 
@@ -447,64 +456,69 @@ opacity: 0;: Makes the element fully transparent. */
     mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%), 50%, transparent 100%);
 }
 
-.about__description b{
+.about__description b {
     color: var(--first-color-light);
 }
 
-.about__button{
+.about__button {
     width: 100%;
 }
 
 
 /* EXPERIENCE */
-.experience__content{
+.experience__content {
     row-gap: 2rem;
 }
 
-.experience__data{
+.experience__data {
     row-gap: 1rem;
 }
 
-.experience__company{
+.experience__company {
     font-size: var(--h2-font-size);
     font-weight: var(--font-bold);
 }
 
-.experience__profession{
+.experience__profession {
     font-size: var(--h3-font-size);
     margin-bottom: .25rem;
 }
 
-.experience__data{
+.experience__data {
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: .75rem;
 }
+
 /* SKILLS */
 
-.skills__img{
+.skills__img {
     width: 35px;
     margin-bottom: .5rem;
 }
 
-.skills__name{
+.skills__name {
     font-size: var(--small-font-size);
 }
 
-.skills__content{
+.skills__content {
     grid-template-columns: repeat(3, max-content);
     justify-content: space-around;
     align-items: flex-end;
 }
 
-.skills__box{
+.skills__box {
     display: grid;
     /* align-items: center; */
-    justify-items: center;
+    /* Centers items verically */
+    /* justify-items: center; */
+    /* Centers items horizontally */
+    place-items: center;
+    /* Centers items both horizontally and vertically */
     transition: transform .4s;
 }
 
-.skills__box:hover{
+.skills__box:hover {
     transform: translateY(-.25rem);
 }
 
@@ -512,22 +526,96 @@ opacity: 0;: Makes the element fully transparent. */
 
 /*=============== SERVICES ===============*/
 
-.services{
+.services {
     background-color: var(--container-color);
 }
 
-.services__container{
+.services__container {
     row-gap: 2rem;
 }
 
-.services__icon{
+.services__icon {
     display: block;
     color: var(--first-color-light);
     font-size: 2rem;
     /* margin-bottom: 1rem; */
 }
 
-.services__title{
+.services__title {
     font-size: var(--h3-font-size);
     margin-bottom: .75rem;
+}
+
+
+
+/*=============== CONTACT ===============*/
+.contact__container {
+    row-gap: 4rem;
+}
+
+.contact__group,
+.contact__form {
+    gap: 1rem;
+}
+
+.contact__form{
+    position: relative;
+}
+
+.contact__input{
+    padding: 1.25rem;
+    background-color: var(--container-color);
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.contact__input::placeholder{
+    color: var(--text-color-light);
+}
+
+.contact__area{
+    height: 10rem;
+    resize: none;
+}
+
+.contact__button{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.contact__social{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 3rem;
+}
+
+.contact__social-link{
+    color: var(--title-color);
+    display: inline-flex;
+    column-gap: .25rem;
+    align-items: center;
+    transition: color .4s;
+}
+
+
+.contact__social-link>i{
+    font-size: 1.5rem;
+}
+
+.contact__social-link span{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.contact__social-link:hover{
+    color: var(--first-color-light);
+}
+
+.contact__message{
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
 }
