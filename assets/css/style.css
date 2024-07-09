@@ -18,7 +18,7 @@
         -> Click on tab (Color Conversion)
         -> Copy the color mode (HSL)
   */
-    --hue: 300;
+    --hue: 240;
     --first-color: hsl(var(--hue), 55%, 55%);
     --first-color-light: hsl(var(--hue), 55%, 65%);
     --first-color-alt: hsl(var(--hue), 50%, 50%);
@@ -618,4 +618,36 @@ opacity: 0;: Makes the element fully transparent. */
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
+}
+
+/* ==============Footer================ */
+.footer{
+    background-color: var(--container-color);
+}
+
+.footer__container{
+    padding-block: 3rem 2rem;
+}
+
+.footer__links{
+    display: flex;
+    justify-content: center;
+    column-gap: 2.5rem;
+}
+
+.footer__links{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    transition: color .4s;
+}
+
+.footer__links:hover{
+    color: var(--first-color-light);
+}
+
+.footer__copy{
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    text-align: center;
+
 }
