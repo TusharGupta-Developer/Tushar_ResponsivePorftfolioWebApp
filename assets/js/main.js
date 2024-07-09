@@ -6,16 +6,16 @@ const navMenu = document.getElementById("nav--menu"),
 
 /* Menu show */
 if (navToggle) {
-    navToggle.addEventListener("click",()=>{
+    navToggle.addEventListener("click", () => {
         navMenu.classList.add("show-menu")
     })
-//     The code first checks if the navToggle element exists.
-// If it exists, it adds an event listener for the click event.
+    //     The code first checks if the navToggle element exists.
+    // If it exists, it adds an event listener for the click event.
 }
 
 // Menu hidden
-if(navClose){
-    navClose.addEventListener("click", ()=>{
+if (navClose) {
+    navClose.addEventListener("click", () => {
         navMenu.classList.remove("show-menu")
     })
 }
@@ -34,7 +34,7 @@ if(navClose){
 
 const navLink = document.querySelectorAll(".nav__link")
 
-const linkAction = ()=>{
+const linkAction = () => {
     const navMenu = document.getElementById("nav--menu")
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove("show-menu")
@@ -47,15 +47,54 @@ navLink.forEach(n => n.addEventListener("click", linkAction))
 
 
 /*=============== Self:ADD BLUR HEADER ===============*/
-document.addEventListener("scroll", ()=>{
+document.addEventListener("scroll", () => {
     const header = document.getElementById("header");
 
-    if(window.scrollY>50){ // Checks if the vertical scroll position (window.scrollY) is greater than 50 pixels.
+    if (window.scrollY > 50) { // Checks if the vertical scroll position (window.scrollY) is greater than 50 pixels.
 
         header.classList.add("blur__header")
     }
-    else{
+    else {
         header.classList.remove("blur__header")
     }
 })
 
+
+/*=============== EMAIL JS ===============*/
+
+const contactForm = document.getElementById("contact--form"),
+    contactMessage = document.getElementById("contact--message");
+
+const sendEmail = (e) => {
+    e.preventDefault()
+
+    // serviceID - templateID - #form - publicKey
+    emailjs.sendForm('serviceID','templateID ','#form-id','publicKey')
+      
+    .then(() => {
+        // Show sent message
+        contactMessage.textContent = "Message sent successfully ✅";
+
+        setTimeout(() => {
+            contactMessage.textContent = "";
+        }, 5000);
+
+        // Clear input fields
+        contactForm.reset();
+    })
+    .catch((error) => {
+        // Show error message
+        contactMessage.textContent = "Message not sent (service error)❌";
+        // console.error('EmailJS error:', error)
+        // contactMessage.textContent = error;
+
+        setTimeout(() => {
+            contactMessage.textContent = "";
+        }, 5000);
+    });
+};
+
+
+
+
+contactForm.addEventListener('submit', sendEmail)
