@@ -69,33 +69,46 @@ const sendEmail = (e) => {
     e.preventDefault()
 
     // serviceID - templateID - #form - publicKey
-    emailjs.sendForm('serviceID','templateID ','#form-id','publicKey')
-      
-    .then(() => {
-        // Show sent message
-        contactMessage.textContent = "Message sent successfully ✅";
+    emailjs.sendForm('serviceID', 'templateID ', '#form-id', 'publicKey')
 
-        setTimeout(() => {
-            contactMessage.textContent = "";
-        }, 5000);
+        .then(() => {
+            // Show sent message
+            contactMessage.textContent = "Message sent successfully ✅";
 
-        // Clear input fields
-        contactForm.reset();
-    })
-    .catch((error) => {
-        // Show error message
-        contactMessage.textContent = "Message not sent (service error)❌";
-        // console.error('EmailJS error:', error)
-        // contactMessage.textContent = error;
-        
-        setTimeout(() => {
-            contactMessage.textContent = "";
-        }, 5000);
-        contactForm.reset();
-    });
+            setTimeout(() => {
+                contactMessage.textContent = "";
+            }, 5000);
+
+            // Clear input fields
+            contactForm.reset();
+        })
+        .catch((error) => {
+            // Show error message
+            contactMessage.textContent = "Message not sent (service error)❌";
+            // console.error('EmailJS error:', error)
+            // contactMessage.textContent = error;
+
+            setTimeout(() => {
+                contactMessage.textContent = "";
+            }, 5000);
+            contactForm.reset();
+        });
 };
 
-
-
-
 contactForm.addEventListener('submit', sendEmail)
+
+
+/* ===========SHOW SCOLL UP=========== */
+
+const scrollUp = () => {
+    const scroll_Up = document.getElementById("scroll--up");
+
+    if (window.scrollY >= 350) { // Checks if the vertical scroll position (window.scrollY) is greater than 350 pixels.
+        scroll_Up.classList.add("show__scroll")
+    }
+    else {
+        scroll_Up.classList.remove("show__scroll")
+    }
+}
+
+window.addEventListener("scroll", scrollUp)
