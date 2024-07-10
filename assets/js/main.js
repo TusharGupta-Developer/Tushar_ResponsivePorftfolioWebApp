@@ -87,10 +87,11 @@ const sendEmail = (e) => {
         contactMessage.textContent = "Message not sent (service error)❌";
         // console.error('EmailJS error:', error)
         // contactMessage.textContent = error;
-
+        
         setTimeout(() => {
             contactMessage.textContent = "";
         }, 5000);
+        contactForm.reset();
     });
 };
 

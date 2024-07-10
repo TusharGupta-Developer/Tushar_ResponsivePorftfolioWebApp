@@ -18,7 +18,7 @@
         -> Click on tab (Color Conversion)
         -> Copy the color mode (HSL)
   */
-    --hue: 240;
+    --hue: 300;
     --first-color: hsl(var(--hue), 55%, 55%);
     --first-color-light: hsl(var(--hue), 55%, 65%);
     --first-color-alt: hsl(var(--hue), 50%, 50%);
@@ -77,8 +77,8 @@ body {
 input,
 button,
 textarea {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
 }
 
 
@@ -238,6 +238,11 @@ img {
 
 
 /*=============== HOME ===============*/
+.home {
+    /*later added */
+    padding-block-start: 1.5rem;
+    padding-block-end: 7rem;
+}
 
 .home__container {
     row-gap: 2rem;
@@ -558,38 +563,51 @@ opacity: 0;: Makes the element fully transparent. */
     gap: 1rem;
 }
 
-.contact__form{
+.contact__form {
     position: relative;
 }
 
-.contact__input{
+.contact__input {
     padding: 1.25rem;
     background-color: var(--container-color);
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
+
+    /* border-radius: 5px; */
+    border: 1px solid var(--container-color);
+    border-bottom-width: .15rem;
+
+    transition: border-color .3s ease;
+
 }
 
-.contact__input::placeholder{
+.contact__input:focus,
+.contact__input:valid {
+    border-color: var(--first-color);
+}
+
+
+.contact__input::placeholder {
     color: var(--text-color-light);
 }
 
-.contact__area{
+.contact__area {
     height: 10rem;
     resize: none;
 }
 
-.contact__button{
+.contact__button {
     margin-top: 1rem;
     cursor: pointer;
 }
 
-.contact__social{
+.contact__social {
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
     column-gap: 3rem;
 }
 
-.contact__social-link{
+.contact__social-link {
     color: var(--title-color);
     display: inline-flex;
     column-gap: .25rem;
@@ -598,20 +616,20 @@ opacity: 0;: Makes the element fully transparent. */
 }
 
 
-.contact__social-link>i{
+.contact__social-link>i {
     font-size: 1.5rem;
 }
 
-.contact__social-link span{
+.contact__social-link span {
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold);
 }
 
-.contact__social-link:hover{
+.contact__social-link:hover {
     color: var(--first-color-light);
 }
 
-.contact__message{
+.contact__message {
     position: absolute;
     left: 0;
     bottom: -2rem;
@@ -621,31 +639,31 @@ opacity: 0;: Makes the element fully transparent. */
 }
 
 /* ==============Footer================ */
-.footer{
+.footer {
     background-color: var(--container-color);
 }
 
-.footer__container{
+.footer__container {
     padding-block: 3rem 2rem;
 }
 
-.footer__links{
+.footer__links {
     display: flex;
     justify-content: center;
     column-gap: 2.5rem;
 }
 
-.footer__links{
+.footer__links {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
     transition: color .4s;
 }
 
-.footer__links:hover{
+.footer__links:hover {
     color: var(--first-color-light);
 }
 
-.footer__copy{
+.footer__copy {
     color: var(--title-color);
     font-size: var(--small-font-size);
     text-align: center;
