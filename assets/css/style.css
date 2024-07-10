@@ -667,5 +667,17 @@ opacity: 0;: Makes the element fully transparent. */
     color: var(--title-color);
     font-size: var(--small-font-size);
     text-align: center;
+}
 
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+    width: .6rem;
+    background-color: hsl(var(--hue), 20%, 20%);
+}
+::-webkit-scrollbar-thumb{
+    background-color: hsl(var(--hue), 20%, 30%);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(var(--hue), 20%, 40%);
 }
