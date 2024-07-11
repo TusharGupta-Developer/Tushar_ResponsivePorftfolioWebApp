@@ -112,3 +112,14 @@ const scrollUp = () => {
 }
 
 window.addEventListener("scroll", scrollUp)
+
+
+
+/* ============ Range Input ===========*/
+const hueRange = document.getElementById('hue--range');
+
+hueRange.addEventListener('input', (event) => {
+    const hueValue = event.target.value;
+    document.documentElement.style.setProperty('--hue', hueValue);
+    console.log(hueValue)
+});
