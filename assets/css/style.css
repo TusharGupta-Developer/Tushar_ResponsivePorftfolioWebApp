@@ -60,6 +60,10 @@
     /* background-color: hsl(14, 55%, 55%); */
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body,
 input,
 textarea,
@@ -694,7 +698,7 @@ opacity: 0;: Makes the element fully transparent. */
     padding: 6px;
     font-size: 1.25rem;
 
-    /* box-shadow: 0 4px 12px hsla(var(--hue), 30%, 8%, .3); */
+    box-shadow: 0 4px 12px hsla(var(--hue), 30%, 8%, .3);
     z-index: var(--z-tooltip);
     transition: bottom .4s, transform .4s;
 }
@@ -712,6 +716,7 @@ opacity: 0;: Makes the element fully transparent. */
 /* ============ Range Input===========*/
 .hue--control{
    display: inline-flex;
+   /* display: flex; */
    justify-content: center;
    margin-top: 1rem;
    
@@ -729,6 +734,16 @@ opacity: 0;: Makes the element fully transparent. */
     outline: none;
     border-radius: 5px;
     /* transition: background 0.3s ease; */
+}
+
+/* Active Link */
+
+.active-link{
+    color: var(--first-color-light);
+}
+
+.active-link::after{
+    width: 30%;
 }
 
 
