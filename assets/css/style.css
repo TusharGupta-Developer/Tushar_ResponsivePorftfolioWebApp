@@ -986,9 +986,7 @@ opacity: 0;: Makes the element fully transparent. */
         row-gap: 4rem;
     }
 
-    .experience__description {
-        /* font-size: var(--small-font-size); */
-    }
+   
 
     .experience__data {
         grid-template-columns: 320px 380px;
@@ -1046,23 +1044,23 @@ opacity: 0;: Makes the element fully transparent. */
         bottom: 4.5rem;
     }
 
-    .contact__social{
+    .contact__social {
         grid-template-columns: repeat(3, max-content);
         column-gap: 5rem;
     }
 
-    .footer__container{
+    .footer__container {
         padding-block: 3rem;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
     }
 
-    .footer__links{
+    .footer__links {
         column-gap: 4rem;
         order: 1;
     }
 
-    .scroll__up{
+    .scroll__up {
         right: 3rem;
     }
 }
