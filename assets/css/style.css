@@ -784,13 +784,20 @@ opacity: 0;: Makes the element fully transparent. */
 
 
     #hue--range {
-        width: 200px;
+        width: 70vw;
     }
 
     .skills__content {
         grid-template-columns: repeat(2, max-content);
     }
 }
+
+@media screen and (max-width: 540px) {
+    #hue--range{
+        width: 70vw;
+    }
+}
+
 
 /* For medium devices */
 @media screen and (min-width: 540px) {

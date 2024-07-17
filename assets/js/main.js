@@ -98,6 +98,17 @@ const sendEmail = (e) => {
 contactForm.addEventListener('submit', sendEmail)
 
 
+
+/* ============ Range Input ===========*/
+const hueRange = document.getElementById('hue--range');
+
+hueRange.addEventListener('input', (event) => {
+    const hueValue = event.target.value;
+    document.documentElement.style.setProperty('--hue', hueValue);
+    // console.log(hueValue)
+});
+
+
 /* ===========SHOW SCOLL UP=========== */
 
 const scrollUp = () => {
@@ -112,6 +123,9 @@ const scrollUp = () => {
 }
 
 window.addEventListener("scroll", scrollUp)
+
+/* ============ Range Input ===========*/
+
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll("section[id]");
@@ -159,13 +173,15 @@ const sr = ScrollReveal({
 sr.reveal(".home__data, .experience, .skills, .contact__container")
 sr.reveal(".home__img", {delay: 600})
 sr.reveal(".home__img", {delay: 600})
-// sr.reveal(".hue--control", {delay: 700}) //self
+sr.reveal(".hue--control", {delay: 700}) //self
 sr.reveal(".home__scroll", {delay: 800})
 
 sr.reveal(".work__card, .services__card", {interval: 100})
 
-sr.reveal(".about__content", {origin: "right"})
-sr.reveal(".about__img", {origin: "left"})
+// sr.reveal(".about__content", {origin: "right"}) //not give to work mkae hurle in header and home
+// sr.reveal(".about__img", {origin: "left"})
+sr.reveal(".about__content", {origin: "top"})
+sr.reveal(".about__img", {origin: "bottom"})
 
 
 
@@ -192,11 +208,4 @@ sr.reveal(".about__img", {origin: "left"})
 
 
 
-/* ============ Range Input ===========*/
-const hueRange = document.getElementById('hue--range');
 
-hueRange.addEventListener('input', (event) => {
-    const hueValue = event.target.value;
-    document.documentElement.style.setProperty('--hue', hueValue);
-    // console.log(hueValue)
-});
