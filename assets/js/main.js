@@ -1,3 +1,7 @@
+if ('scrollRestoration' in history) { //This code disables the automatic scroll restoration, allowing you to control the scroll position manually.
+    history.scrollRestoration = 'manual';
+}
+
 /*=============== SHOW MENU ===============*/
 
 const navMenu = document.getElementById("nav--menu"),
@@ -111,27 +115,33 @@ hueRange.addEventListener('input', (event) => {
 
 /* ===========SHOW SCOLL UP=========== */
 
+
+// if ('scrollRestoration' in history) { //This code disables the automatic scroll restoration, allowing you to control the scroll position manually.
+//     history.scrollRestoration = 'manual';
+// }
+
 const scrollUp = () => {
     const scroll_Up = document.getElementById("scroll--up");
 
     if (window.scrollY >= 350) { // Checks if the vertical scroll position (window.scrollY) is greater than 350 pixels.
         scroll_Up.classList.add("show__scroll")
     }
+
     else {
         scroll_Up.classList.remove("show__scroll")
+
     }
 }
 
 window.addEventListener("scroll", scrollUp)
 
-/* ============ Range Input ===========*/
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll("section[id]");
 
 const scrollActive = () => {
-    
+
     const scrollDown = window.scrollY;
     // console.log(scrollDown);
 
@@ -140,10 +150,10 @@ const scrollActive = () => {
             sectionTop = current.offsetTop - 55,
             sectionId = current.getAttribute('id'),
             sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-            // console.log(current.offsetHeight);
-            // console.log(current.offsetTop);
-            
-            
+        // console.log(current.offsetHeight);
+        // console.log(current.offsetTop);
+
+
 
 
         if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
@@ -161,7 +171,7 @@ window.addEventListener('scroll', scrollActive);
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 
 const sr = ScrollReveal({
-    origin : "top",
+    origin: "top",
     distance: "60px",
     duration: "2500",
     delay: 400,
@@ -171,18 +181,66 @@ const sr = ScrollReveal({
 
 
 sr.reveal(".home__data, .experience, .skills, .contact__container")
-sr.reveal(".home__img", {delay: 600})
-sr.reveal(".home__img", {delay: 600})
-sr.reveal(".hue--control", {delay: 700}) //self
-sr.reveal(".home__scroll", {delay: 800})
+sr.reveal(".home__img", { delay: 600 })
+sr.reveal(".home__img", { delay: 600 })
+sr.reveal(".hue--control", { delay: 700 }) //self
+sr.reveal(".home__scroll", { delay: 800 })
 
-sr.reveal(".work__card, .services__card", {interval: 100})
+sr.reveal(".work__card, .services__card", { interval: 100 })
 
 // sr.reveal(".about__content", {origin: "right"}) //not give to work mkae hurle in header and home
 // sr.reveal(".about__img", {origin: "left"})
-sr.reveal(".about__content", {origin: "top"})
-sr.reveal(".about__img", {origin: "bottom"})
+sr.reveal(".about__content", { origin: "top" })
+sr.reveal(".about__img", { origin: "bottom" })
 
+
+
+
+
+// const imgBlur = document.getElementById("work--card"),
+//     workImgBlur = document.getElementById("workImg--blur"),
+//     // workButton = document.getElementById("workImg__blur-button")
+
+// const imgBlur = document.getElementsByClassName("work__card"),
+//  workImgBlur = document.getElementsByClassName("workImg__blur"),
+//     workButton = document.getElementById("workImg__blur-button")
+
+// Array.from(workImgBlur,imgBlur).forEach((blur,card) => {
+    
+    
+//         card.addEventListener("mouseover", () => {
+//             blur.classList.add("show-blur")
+//             // workButton.classList.add("work-button")
+//         })
+
+    
+//         card.addEventListener("mouseout", () => {
+//             blur.classList.remove("show-blur")
+//             // workButton.classList.remove("work-button")
+//         })
+    
+    
+// })
+
+
+// Select all elements with class "work__card" and "workImg__blur"
+const imgBlurs = document.getElementsByClassName("workImg__container");
+const workImgBlurs = document.getElementsByClassName("workImg__blur");
+
+// Convert HTMLCollections to arrays and loop through them
+Array.from(imgBlurs).forEach((card, index) => {
+  const blur = workImgBlurs[index];
+
+  card.addEventListener("mouseover", () => {
+    blur.classList.add("show-blur");
+    // workButton.classList.add("work-button");
+  });
+
+  card.addEventListener("mouseout", () => {
+    blur.classList.remove("show-blur");
+    // workButton.classList.remove("work-button");
+  });
+});
 
 
 

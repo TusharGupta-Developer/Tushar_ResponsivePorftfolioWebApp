@@ -793,7 +793,7 @@ opacity: 0;: Makes the element fully transparent. */
 }
 
 @media screen and (max-width: 540px) {
-    #hue--range{
+    #hue--range {
         width: 70vw;
     }
 }
@@ -993,7 +993,7 @@ opacity: 0;: Makes the element fully transparent. */
         row-gap: 4rem;
     }
 
-   
+
 
     .experience__data {
         grid-template-columns: 320px 380px;
@@ -1071,3 +1071,38 @@ opacity: 0;: Makes the element fully transparent. */
         right: 3rem;
     }
 }
+
+.work__img {
+    position: relative;
+}
+
+.workImg__container {
+    position: relative;
+
+}
+
+.workImg__blur {
+    position: absolute;
+    /* top: 202px; */
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    /* height: 0; */
+
+    background-color: hsla(var(--hue), 70%, 20%, .3);
+    backdrop-filter: blur(4px);
+    --webkit-backdrop-filter: blur(16px);
+
+
+    transition: height .4s ease-out;
+}
+
+
+
+.show-blur{
+    /* transition: transform .4s;
+    transform: translateY(-202px); */
+    height: 101%;
+}
+
+
