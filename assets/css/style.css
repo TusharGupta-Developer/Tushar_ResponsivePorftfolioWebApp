@@ -756,7 +756,7 @@ opacity: 0;: Makes the element fully transparent. */
 }
 
 .home__scroll {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 #hue--range {
@@ -1244,4 +1244,9 @@ opacity: 0;: Makes the element fully transparent. */
     .tooltip-close{
         left: 12.3rem;
     }
+}
+
+
+.services__description{
+    /* text-align: justify; */
 }
