@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--=============== FAVICON ===============-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_io (5)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io (5)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io (5)/favicon-16x16.png">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
@@ -24,6 +28,13 @@
             <a href="#" class="nav__logo">Tushar</a>
 
             <div class="nav__menu" id="nav--menu">
+                <!-- <div class="menu"> -->
+
+                <!-- <div class="menu__img">
+                    
+                        <img src="assets/img/Menu_profile_img2.jpeg" alt="">
+                        <h1>Tushar Gupta</h1>
+                </div> -->
                 <ul class="nav__list">
                     <li>
                         <a href="#home" class="nav__link">Home</a>
@@ -47,6 +58,7 @@
                     </li>
                 </ul>
 
+                <!-- </div> -->
                 <!-- Close Button -->
                 <div class="nav__close" id="nav--close">
                     <i class="ri-close-large-line"></i>
@@ -80,6 +92,14 @@
                 <div class="hue--control">
                     <!-- <label for="hue-range">Adjust Hue:</label>  -->
                     <input type="range" id="hue--range" min="0" max="360" value="240">
+                    <div class="tooltip" id="tooltip">
+                        <span class="tooltip-close" id="tooltipClose"><i class="ri-close-large-line"></i>
+                        </span>
+                        <div class="tooltip-content">
+                            <!-- <h3>Adjust Hue</h3> -->
+                            <p>You can change the Website color by using this slider.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- .home__scroll-text|| Recent Works -->
@@ -117,7 +137,7 @@
                             </div>
                         </div>
 
-                            <i class="ri-arrow-right-fill"></i>
+                        <i class="ri-arrow-right-fill"></i>
                     </a>
                 </article>
 

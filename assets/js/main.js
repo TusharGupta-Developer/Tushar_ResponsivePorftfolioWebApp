@@ -243,7 +243,34 @@ Array.from(imgBlurs).forEach((card, index) => {
 });
 
 
+/* ==============POP-UP of slider =============== */
+document.addEventListener("DOMContentLoaded", function() {
+    const tooltip = document.getElementById("tooltip");
+    const tooltipClose = document.getElementById("tooltipClose");
 
+    // Function to show the tooltip after 4 seconds
+    function showTooltip() {
+        setTimeout(() => {
+            tooltip.style.display = "block";
+            tooltip.style.opacity = "1";
+            tooltip.classList.add("animate");
+        }, 6000); // 4000 milliseconds = 4 seconds
+    }
+
+    // Function to hide the tooltip
+    function hideTooltip() {
+        tooltip.style.opacity = "0";
+        setTimeout(() => {
+            tooltip.style.display = "none";
+        }, 300); // Match with the CSS transition duration
+    }
+
+    // Show the tooltip after 4 seconds
+    showTooltip();
+
+    // Hide the tooltip when the close icon is clicked
+    tooltipClose.addEventListener("click", hideTooltip);
+});
 
 
 
