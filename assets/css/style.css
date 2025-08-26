@@ -578,7 +578,14 @@ opacity: 0;: Makes the element fully transparent. */
     transform: translateY(-.25rem);
 }
 
-
+.skills >h3{
+    font-size: .85rem;
+    margin-top: 2rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    color: var(--text-color);
+}
 
 /*=============== SERVICES ===============*/
 
