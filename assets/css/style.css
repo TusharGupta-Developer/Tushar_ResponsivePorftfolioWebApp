@@ -514,6 +514,7 @@ opacity: 0;: Makes the element fully transparent. */
 
 .experience__data {
     row-gap: 1rem;
+    margin: auto;
 }
 
 .experience__company {
@@ -531,6 +532,15 @@ opacity: 0;: Makes the element fully transparent. */
     font-size: var(--small-font-size);
     margin-bottom: .75rem;
 }
+
+.experience__summary {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--text-color-light); /* slightly lighter than normal text */
+  text-align: center;
+  width: 100%;
+}
+
 
 /* SKILLS */
 
