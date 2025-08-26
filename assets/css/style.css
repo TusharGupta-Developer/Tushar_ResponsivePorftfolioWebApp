@@ -541,6 +541,10 @@ opacity: 0;: Makes the element fully transparent. */
   width: 100%;
 }
 
+.experience__description > b,a{
+    color: var(--first-color);
+}
+
 
 /* SKILLS */
 
