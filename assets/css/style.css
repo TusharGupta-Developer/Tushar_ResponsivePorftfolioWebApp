@@ -281,16 +281,18 @@ img {
 
 .home__container {
     row-gap: 2rem;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 .home__img {
     /* width: 220px; */
     justify-self: center;
-    mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%), 60%,
+    /* mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%), 60%,
+            transparent 100%); */
+    mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%), 87%,
             transparent 100%);
 
-    /* width: 500px; */
+    width: 500px;
 }
 
 .home__name {
@@ -495,7 +497,8 @@ opacity: 0;: Makes the element fully transparent. */
 .about__img {
     width: 500px;
     justify-self: center;
-    mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%), 50%, transparent 100%);
+    /* mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%), 50%, transparent 100%); */
+    mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%), 93%, transparent 100%);
 }
 
 .about__description b {
@@ -937,12 +940,13 @@ opacity: 0;: Makes the element fully transparent. */
     }
 
     .home__container {
-        grid-template-columns: 375px 350px;
+        /* grid-template-columns: 375px 350px; */
+        grid-template-columns: 375px 375px;
         gap: 3rem 16rem;
     }
 
     .home__img {
-        width: 350px;
+        /* width: 350px; */
     }
 
     .home__name {
